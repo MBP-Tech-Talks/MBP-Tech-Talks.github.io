@@ -1,0 +1,186 @@
+---
+title: DNA Sequencing
+output:
+    ioslides_presentation:
+        incremental: true
+        transition: faster
+        css: ../style.css
+#    beamer_presentation:
+#        theme: "AnnArbor"
+#        colortheme: "dolphin"
+#        fonttheme: "structurebold"
+author: James Hawley
+date: 2019-10-04
+autosize: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+## MBP Tech Talks | Fall 2019
+
+Fundamentals of Genome Sequencing and Applications
+
+
+## Motivations
+
+* Lots of research involves genome sequencing or and analysis
+* Few resources covering the fundamentals
+* Information is often scattered through blog posts, presentations
+* Multidisciplinary - difficult for a single person to discuss thoroughly
+
+
+## Goals for the fall semester
+
+* Understand foundations of genome sequencing
+    * How DNA is captured and read
+    * What makes good sequencing data
+* Sequence alignment
+* Wet and dry sides of sequencing experiments
+* How to think about good experiment design when sequencing
+
+
+## Outline | Part 1: Fundamentals of genome sequencing
+
+* History of reading DNA
+* Massively-parallel sequencing
+* Standard file formats
+* Sequence alignment
+* Alignment metrics
+    
+## Outline | Part 2: Applications of genome sequencing
+    
+* Mutation detection
+* Chromatin accessibililty
+* Histone modifications and protein binding
+* Transcriptome sequencing
+* Chromatin organization
+* DNA methylation
+
+
+## Session structure
+
+* HSB 100, Friday 12:00 - 14:00
+* No food or drinks
+* Each session has 2 parts, break in the middle
+
+
+# Fundamentals of DNA sequencing
+
+
+## DNA molecules
+
+<div class="columns-2">
+![](dna-structure.png)
+
+
+* DNA is double-stranded polymer
+* DNA contains 4 nucleotides: adenine (A), cytosine (C), guanine (G), thymine (T)
+* DNA has a sugar-phosphate backbone
+* Nucleotides come in complementary pairs: A-T, C-G
+
+<!-- [1] Alberts, Molecular biology of the cell, 6ed. pg. 176 {.footnote} -->
+</div>
+
+
+## DNA molecules
+
+<div class="columns-2">
+![](dna-groove.png)
+
+* DNA has a right-handed orientation
+* Strands are oriented in opposite directions
+* We measure direction by counting 5' to 3'
+
+<!-- [2] Alberts, Molecular biology of the cell, 6ed. pg. 177 -->
+</div>
+
+## DNA encodes information for organisms
+
+![](dna-replication.png)
+
+
+* Complementary strands allow for replication
+* Sequences themselves code for proteins inside cells
+
+<!-- [3] Alberts, Molecular biology of the cell, 6ed. pg. 178 -->
+
+## DNA sequencing
+
+* Genome: set of all DNA inside an organism
+* Sequencing: the process of measuring the order of these nucleotides in a set of cells
+
+
+## Early DNA sequencing | Sanger sequencing
+
+<div class="note">
+* Just from a high level, since details aren't totally relevant, just the idea
+</div>
+
+* Gel electrophoresis
+    * Small fragments of DNA are loaded into lanes of gel
+    * Small electric potential pulls DNA through gel
+    * Larger resistance on longer fragments
+* Load polymerase, primers, and ddNTPs to template strand
+    * Primers to act as substrate for polymerase
+    * Polymerase to bind ddNTPs to template strand
+    * Add ddNTPs one at a time to control which nucleotide gets added next
+
+## Early DNA sequencing | Sanger sequencing
+
+![](sanger-seq.png)
+
+<div class="note">
+* Separate small portion after adding a particular ddNTP
+    * Keep all portions after adding a given ddNTP together
+    * Load these in a lane
+* Bright band in the lane gives nucleotide
+* Vertical position gives order in sequence
+</div>
+
+<!-- [3] Mardis, 2013 -->
+
+## Early DNA sequencing | Sanger sequencing
+
+<div class="columns-2">
+Pros
+* Sequence DNA fragments
+* Can visually see the order of nucleotides
+
+Cons
+* Limited by sharpness of bands
+* Limited by length of gel
+* X-ray gel exposure, image development, one nucleotide at a time (laborious)
+</div>
+
+## Early DNA sequencing | Sequencing by synthesis
+
+* Use ideas of Sanger sequencing:
+    * Primers, polymerase, nucleotides
+    * Synthesize complementary strand base-by-base
+* Instead of measuring all at once via gel, measure fluorescence
+
+## Early DNA sequencing | Sequencing by synthesis
+
+![](lego-dna.png)
+
+## Early DNA sequencing | Sequencing by synthesis
+
+![](lego-dna-synthesis-1.png)
+
+## Early DNA sequencing | Sequencing by synthesis
+
+![](lego-dna-synthesis-2.png)
+
+## Early DNA sequencing | Sequencing by synthesis
+
+![](lego-dna-synthesis-3.png)
+
+## Early DNA sequencing | Sequencing by synthesis
+
+![](lego-dna-synthesis-4.png)
+
+## Early DNA sequencing | Sequencing by synthesis
+
+![](lego-dna-synthesis-5.png)
