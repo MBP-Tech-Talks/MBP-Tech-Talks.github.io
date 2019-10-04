@@ -405,23 +405,7 @@ FFFEEBBBCBCCBBAAA:::;;;;
 
 ## DNA sequencing data is full of errors
 
-```{r}
-library("data.table")
-library("ggplot2")
-dt = data.table(
-    x = rep(0:5e3, 4),
-    n = rep(c(1e7, 1e8), each = 1e4),
-    q = rep(c(30, 40, 30, 40), each = 5e3)
-)
-dt[, p := 10^(-q/10)]
-dt[, y := dpois(x, n*p)]
-
-gg = (
-    ggplot(data = dt)
-    + geom_line(aes(x = x, y = y, colour = n, linetype = q))
-)
-print(gg)
-```
+![](seq-errors.png)
 
 ## Sequencing is a random sampling problem
 
