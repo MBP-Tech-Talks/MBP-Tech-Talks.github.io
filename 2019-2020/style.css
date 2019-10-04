@@ -10,7 +10,11 @@
   font-size: 50%
 }
 
-.footnote {
+.footnotes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 80%;
   font-size: 50%;
   color: gray;
 }
