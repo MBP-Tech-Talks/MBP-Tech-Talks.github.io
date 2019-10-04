@@ -131,7 +131,7 @@ Fundamentals of Genome Sequencing and Applications
 * Sequencing: the process of measuring the order of these nucleotides in a set of cells
 
 
-## Early DNA sequencing | Sanger sequencing
+## Sanger sequencing
 
 <div class="note">
 * Just from a high level, since details aren't totally relevant, just the idea
@@ -146,7 +146,7 @@ Fundamentals of Genome Sequencing and Applications
     * Polymerase to bind ddNTPs to template strand
     * Add ddNTPs one at a time to control which nucleotide gets added next
 
-## Early DNA sequencing | Sanger sequencing
+## Sanger sequencing
 
 ![](sanger-seq.png)
 <footnote>Mardis, 2013</footnote>
