@@ -14,3 +14,9 @@ The presentations are written in RMarkdown, and can be rendered into a variety o
   * Download the configuration tool for your system
   * Your computer needs an ethernet port to use this projector
     * If you don't have one, we can provide a Ethernet-to-USB adapter
+
+## Presentations
+
+You can find all of our talks listed below.
+
+* [01 - DNA Sequencing](/2019-2020/01-dna-sequencing/)
