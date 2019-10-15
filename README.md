@@ -11,5 +11,5 @@ Our full schedule of talks, including links to past presentations, can be found 
 
 ## Contact
 
-The 2019-2020 series is run by @jrhawley (James Hawley) and @mehrankr (Mehran Karimzadeh).
+The 2019-2020 series is run by [@jrhawley](https://github.com/jrhawley) (James Hawley) and [@mehrankr](https://github.com/mehrankr) (Mehran Karimzadeh).
 You can reach us on our [Google Groups forum](https://groups.google.com/forum/#!forum/mbp-bioinformatics-tech-talks).
