@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 # 2019 - 2020 Tech Talks
