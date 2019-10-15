@@ -1,3 +1,8 @@
+
+---
+layout: default
+---
+
 # 2019 - 2020 Tech Talks
 
 In this folder you can find all the presentations for the 2019-2020 academic year.
