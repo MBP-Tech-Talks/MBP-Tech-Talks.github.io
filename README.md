@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# MBP Tech Talks
 
-You can use the [editor on GitHub](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the website for MBP Tech Talks, the student-run series of lectures on topics in bioinformatics, genomics, and biological sciences.
+We are a group of students primarily in the [Department of Medical Biophysics](https://medbio.utoronto.ca/) at the [University of Toronto](https://www.utoronto.ca/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Schedule
 
-### Markdown
+Our full schedule of talks, including links to past presentations, can be found [in our Google Sheets spreadsheet](https://bit.ly/MBP-tech-talks).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+[2019-2020 Talks](/2019-2020/)
 
-```markdown
-Syntax highlighted code block
+## Contact
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The 2019-2020 series is run by @jrhawley (James Hawley) and @mehrankr (Mehran Karimzadeh).
+You can reach us on our [Google Groups forum](https://groups.google.com/forum/#!forum/mbp-bioinformatics-tech-talks).
