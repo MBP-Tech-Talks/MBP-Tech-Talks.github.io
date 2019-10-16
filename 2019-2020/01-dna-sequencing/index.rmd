@@ -160,9 +160,8 @@ Fundamentals of Genome Sequencing and Applications
 </div>
 
 
-## Early DNA sequencing | Sanger sequencing
+## Sanger sequencing
 
-<div class="columns-2">
 Pros
 
 * Sequence DNA fragments
@@ -174,36 +173,36 @@ Cons
 * Limited by sharpness of bands
 * Limited by length of gel
 * X-ray gel exposure, image development, one nucleotide at a time (laborious)
-</div>
 
-## Early DNA sequencing | Sequencing by synthesis
+
+## Sequencing by synthesis
 
 * Use ideas of Sanger sequencing:
     * Primers, polymerase, nucleotides
     * Synthesize complementary strand base-by-base
 * Instead of measuring all at once via gel, measure fluorescence
 
-## Early DNA sequencing | Sequencing by synthesis
+## Sequencing by synthesis
 
 ![](lego-dna.png)
 
-## Early DNA sequencing | Sequencing by synthesis
+## Sequencing by synthesis
 
 ![](lego-dna-synthesis-1.png)
 
-## Early DNA sequencing | Sequencing by synthesis
+## Sequencing by synthesis
 
 ![](lego-dna-synthesis-2.png)
 
-## Early DNA sequencing | Sequencing by synthesis
+## Sequencing by synthesis
 
 ![](lego-dna-synthesis-3.png)
 
-## Early DNA sequencing | Sequencing by synthesis
+## Sequencing by synthesis
 
 ![](lego-dna-synthesis-4.png)
 
-## Early DNA sequencing | Sequencing by synthesis
+## Sequencing by synthesis
 
 ![](lego-dna-synthesis-5.png)
 
@@ -286,17 +285,13 @@ ATTTTATCGCGTAGCTAGCTGGCT
 * Everything encoded in plain text
 </div>
 
-## FASTA format
-
-<div class="columns-2">
-Pros
+## FASTA format Pros
 
 * Simple to understand
 * Encodes DNA in plain letters
 * Easy to parse, edit, etc
 
-
-Cons
+## FASTA format Cons
 
 * Assumes sequences are exact
     * Often not true in practice
@@ -306,7 +301,6 @@ Cons
 * No computational optimization
     * Random access
     * ASCII encoding is overkill when you only need 2 bits
-</div>
 
 ## FASTQ format
 
@@ -379,11 +373,11 @@ $p = \mathbb{P}[\text{incorrect call}] = \frac{3}{9} = \frac{1}{3}$
 * $q = 40 \implies$ I
 
 ```{shell}
->reference-seq-name1
+@reference-seq-name1
 ATCTATACTTTATCTTTATCTTTA
 +
 GFFFFBBBCBCCBBAAA:::;;;;
->reference-seq-name2
+@reference-seq-name2
 ATTTTATCGCGTAGCTAGCTGGCT
 +
 FFFEEBBBCBCCBBAAA:::;;;;
@@ -440,7 +434,12 @@ FFFEEBBBCBCCBBAAA:::;;;;
 fastqc {FASTQ}
 ```
 
-## FastQC
+## FastQC Examples
+
+* https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/01-dna-sequencing
+* https://www.bioinformatics.babraham.ac.uk/projects/fastqc/RNA-seq_fastqc.html
+* https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html
+* https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_short_fastqc.html
 
 ## Summary
 
