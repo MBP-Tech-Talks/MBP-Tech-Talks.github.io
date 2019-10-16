@@ -1,0 +1,41 @@
+---
+title: DNA Sequencing
+output:
+    ioslides_presentation:
+        incremental: true
+        transition: faster
+        css: ../style.css
+author: James Hawley
+date: 2019-10-18
+autosize: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
+
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
+  });
+});
+</script>
+
+## MBP Tech Talks | Sequence Alignment
+
+## Motivations
+
+## Outline
+
+## DNA sequences as strings
