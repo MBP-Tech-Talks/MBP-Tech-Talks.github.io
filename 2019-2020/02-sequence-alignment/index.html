@@ -10,9 +10,7 @@ date: 2019-10-18
 autosize: true
 ---
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
@@ -50,8 +48,6 @@ $(document).ready(function() {
 ## DNA sequencing
 
 ![High level overview of DNA sequencing]()
-
-# Exact string matching
 
 ## DNA sequences as strings {.build}
 
@@ -91,6 +87,13 @@ FFFEEBBBCBCCBBAAA:::;;;;
 * Empty string: $\null$
 * $|\null| = 0$
 
+## String operations | Concatenation
+
+* Two strings: S, T
+* Concatenation(S, T) = ST
+* Concatenation(T, S) = TS
+* Note: ST != TS
+
 ## String operations | Indexing
 
 * S[i] = (i + 1)th character of S
@@ -111,102 +114,3 @@ FFFEEBBBCBCCBBAAA:::;;;;
 * Take to strings S, T
 * Assume |S| < |T|
 * Find all positions (indices) in T where S matches exactly
-* Question: What's an easy way to find all of these positions?
-
-## Exact string matching | Naive algorithm
-
-1. Check first character of S against first character of T
-2. If match, check second of each
-3. Repeat #2 until no match or end of S
-4. Remove first character of T, and repeat #1-3 above
-5. Stop when |T| < |S|
-
-See `naive-alignment.py`.
-
-## Exact string matching | Naive algorithm
-
-* How efficient is this method?
-* How many comparisons will we make, in the worst case?
-* From a computational perspective, trying to find "Big-O" function
-
-* $|S|$ comparisons for each shift of $S$
-* $|T| - |S| + 1$ shifts in total
-* $O(|S|(|T| - |S| + 1)) \equiv O(|S||T|)$
-
-## Exact string matching | Boyer-Moore algorithm
-
-* Can improvements be made?
-* Want to reduce total number of comparisons in our worst case scenarios
-
-1. **Bad character**: When mismatch found, shift S until the mismatch becomes a match
-2. **Longer skip**: Try alignments in one direction, compare characters in opposite direction
-3. **Good suffix**: Check characters that previously matched prior to shifting S still match after shift
-
-See `boyer-moore.py`.
-
-## Exact string matching | Boyer-Moore algorithm
-
-* Can show that Boyer-Moore is $O(|T|)$
-* Worst case, asymptotically linear with the length of $T$
-* Compare with naive: $O(|T| |S|)$
-* Questions?
-
-# Break
-
-# Non-exact string matching
-
-## Hamming distance
-
-## Edit distance
-
-## Global vs local alignment
-
-* Global: match entirety of $S$ to entirety of $T$
-* Local: match entirety of $S$ to a part of $T$
-
-![](global-local-alignment.png)
-
-## Calculating edit distance by matrix filling
-
-## Global vs local alignment
-
-* Calculating edit distance explicitly is global alignment
-* Can change 1 line in matrix filling algorithm to perform local alignment
-* Set first row to 0, instead of ${1, ..., |T|}$
-
-## Smith-Waterman algorithm
-
-* Preprocessing
-* Matrix filling for local alignment
-* Traceback
-* Penalties for mismatches
-
-# Performing an alignment
-
-## Tools
-
-* Bowtie2 
-* Samtools
-
-## Data
-
-* [https://mbp-tech-talks.github.io/2019-2020/02-sequence-alignment/data/](https://mbp-tech-talks.github.io/2019-2020/02-sequence-alignment-data/)
-* Reference (FASTA)
-* Bowtie2 index (`.bwt2`)
-* DNA sequences (FASTQ)
-
-## Alignment process
-
-1. DNA sequencing file (FASTQ)
-2. Perform sequence alignment (Bowtie2)
-3. Look at file of alignments (SAM/BAM file)
-
-# Summary
-
-## Summary
-
-* DNA sequences as strings of characters
-* Naive and Boyer-Moore Algorithms
-* Hamming and edit distance
-* Smith-Waterman algorithm
-* Aligned a FASTQ to a reference genome
