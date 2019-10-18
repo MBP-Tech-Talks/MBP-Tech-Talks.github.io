@@ -22,6 +22,6 @@ def print_naive(s, t):
     print('')
     return occurrences
 
-print_naive("Lorem", "Lorem ipsum")
-print_naive("aaa", "aaaaaaaaaaaaaaaa")
-print_naive("Hello?", "Are you in there?")
+print_naive("TATC", "TATCGTGA")
+print_naive("AAA", "AAAAAAAAAAAAAAAA")
+print_naive("ACGG", "GTGTGTGTGTGTGTGTGTGT")
