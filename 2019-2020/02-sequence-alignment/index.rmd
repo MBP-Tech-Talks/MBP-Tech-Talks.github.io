@@ -1,5 +1,5 @@
 ---
-title: DNA Sequencing
+title: Sequence Slignment
 output:
     ioslides_presentation:
         incremental: true
@@ -32,8 +32,6 @@ $(document).ready(function() {
 });
 </script>
 
-## MBP Tech Talks | Sequence Alignment
-
 ## Last session
 
 * DNA sequencing technologies
@@ -46,10 +44,7 @@ $(document).ready(function() {
 * Sequencing reads as strings
 * Algorithms for finding string matches
 * Algorithmic efficiency
-
-## DNA sequencing
-
-![High level overview of DNA sequencing]()
+* Tutorial: aligning sequencing data
 
 # Exact string matching
 
@@ -80,27 +75,22 @@ FFFEEBBBCBCCBBAAA:::;;;;
 ## Strings
 
 * String: an ordered sequence of characters belonging to an alphabet
-* $S_n = \left{ s_1, …, s_n | s_i \in \Sigma \right},$ where $\Sigma}$ is the alphabet
-* DNA: $\Sigma = {A, C, G, T}$
-* RNA: $\Sigma = {A, C, G, U}$
-* Protein: $\Sigma = {D, E, R, K, H, N, Q, S, T, Y, A, G, V, L, I, P, F, M, W, C}$
+* $S_n = \left\{ s_1, …, s_n | s_i \in \Sigma \right\},$ where $\Sigma$ is the alphabet
+* DNA: $\Sigma = \{A, C, G, T\}$
+* RNA: $\Sigma = \{A, C, G, U\}$
+* Protein: $\Sigma = \{D, E, R, ..., M, W, C\}$
 
 ## String properties
 
 * Length of a string: $|S_n| = n$
-* Empty string: $\null$
-* $|\null| = 0$
-
-## String operations | Indexing
-
-* S[i] = (i + 1)th character of S
-* Start counting i at 0
+* $S[i] = (i + 1)th$ character of S
+* Start counting $i$ at 0
 
 ## String comparisons
 
-* Substring: S is a substring of T if $\exists$ strings u, v, where T = uSv
-* Prefix: S is a prefix of T if $\exists$ string v, where T = Sv
-* Suffix: S is a suffix of T if $\exists$ string u, where T = uS
+* Substring: $S$ is a substring of $T$ if there exists strings $u$, $v$, where $T = uSv$
+* Prefix: $S$ is a prefix of $T$ if there exists string $v$, where $T = Sv$
+* Suffix: $S$ is a suffix of $T$ if there exists string $u$, where $T = uS$
 
 <div class="note">
 * We've built up most of the machinery we need
@@ -108,91 +98,134 @@ FFFEEBBBCBCCBBAAA:::;;;;
 
 ## Exact string matching
 
-* Take to strings S, T
-* Assume |S| < |T|
-* Find all positions (indices) in T where S matches exactly
+* Take two strings $S, T$
+* Assume $|S| < |T|$
+* Find all positions (indices) in $T$ where $S$ matches exactly
 * Question: What's an easy way to find all of these positions?
+
+## Exact string matching | Examples
+
+* $S =$ "ATCG", $T =$ "TATCGTGA"
+* $S =$ "AAA", $T =$ "AAAAAAAAAAAAAAAA"
+* $S =$ "ACGG", $T =$ "GTGTGTGTGTGTGTGTGTGT"
 
 ## Exact string matching | Naive algorithm
 
-1. Check first character of S against first character of T
+1. Check first character of $S$ against first character of $T$
 2. If match, check second of each
-3. Repeat #2 until no match or end of S
-4. Remove first character of T, and repeat #1-3 above
-5. Stop when |T| < |S|
+3. Repeat #2 until no match or end of $S$
+4. Remove first character of $T$, and repeat #1-3 above
+5. Stop when $|T| < |S|$
 
-See `naive-alignment.py`.
+## Exact string matching | Naive algorithm
+
+* $S =$ "ATCG", $T =$ "TATCGTGA"
+* $S =$ "AAA", $T =$ "AAAAAAAAAAAAAAAA"
+* $S =$ "ACGG", $T =$ "GTGTGTGTGTGTGTGTGTGT"
+
+* See `naive-alignment.py`.
 
 ## Exact string matching | Naive algorithm
 
 * How efficient is this method?
 * How many comparisons will we make, in the worst case?
-* From a computational perspective, trying to find "Big-O" function
+* Computer science: "big-O" notation
 
 * $|S|$ comparisons for each shift of $S$
 * $|T| - |S| + 1$ shifts in total
-* $O(|S|(|T| - |S| + 1)) \equiv O(|S||T|)$
+* $O(|S|(|T| - |S| + 1)) = O(|S||T|)$
 
 ## Exact string matching | Boyer-Moore algorithm
 
 * Can improvements be made?
 * Want to reduce total number of comparisons in our worst case scenarios
 
-1. **Bad character**: When mismatch found, shift S until the mismatch becomes a match
+1. **Bad character**: When mismatch found, shift $S$ until the mismatch becomes a match
 2. **Longer skip**: Try alignments in one direction, compare characters in opposite direction
-3. **Good suffix**: Check characters that previously matched prior to shifting S still match after shift
+3. **Good suffix**: Check characters that previously matched prior to shifting $S$ still match after shift
 
-See `boyer-moore.py`.
+* See `boyer-moore.py`.
 
 ## Exact string matching | Boyer-Moore algorithm
 
 * Can show that Boyer-Moore is $O(|T|)$
 * Worst case, asymptotically linear with the length of $T$
 * Compare with naive: $O(|T| |S|)$
+
+## Summary so far
+
+* Two methods to align strings exactly
+* Key ideas:
+  * Efficiency of algorithm is critical
+  * Preprocess strings to skip alignments
 * Questions?
 
 # Break
 
-# Non-exact string matching
+## Non-exact string matching
 
-## Hamming distance
+* Previous methods only produced exact matches
+* DNA contains mutations, insertions, deletions
+* Need to do string matching with errors
 
 ## Edit distance
+
+* Consider $S, T$ where $|S| < |T|$
+* $E(S, T) =$ min number of operations to transform $S$ into $T$ 
+* 3 operations on characters:
+  * Substitution
+  * Insertion
+  * Deletion
+  
+## Edit distance | Examples
+
+* $S =$ AATTC, $T =$ AATTG
+* $S =$ AATTC, $T =$ AAGGTGT
+* $S =$ ACCGT, $T =$ TCCTAGT
+* Can show $E(S, T) \sim O(|S| |T|)$
+
+
+<div class="note">
+* 1
+* 4
+* 3
+</div>
+
+## Non-exact alignment
+
+* Exact alignment: finding positions where edit distance = 0
+* Non-exact alignment: finding positions with smallest edit distance
+
+<div class="note">
+* Reduced molecular biology problem to a calculation
+</div>
 
 ## Global vs local alignment
 
 * Global: match entirety of $S$ to entirety of $T$
+  * Needleman-Wunsch algorithm
 * Local: match entirety of $S$ to a part of $T$
+  * Smith-Waterman algorithm
 
-![](global-local-alignment.png)
+## Modern sequence alignment algorithms
 
-## Calculating edit distance by matrix filling
+* Preprocessing reference and input
+* Edit distance for local alignment
+* Different penalties for mismatches
+* Including sequence quality scores
 
-## Global vs local alignment
-
-* Calculating edit distance explicitly is global alignment
-* Can change 1 line in matrix filling algorithm to perform local alignment
-* Set first row to 0, instead of ${1, ..., |T|}$
-
-## Smith-Waterman algorithm
-
-* Preprocessing
-* Matrix filling for local alignment
-* Traceback
-* Penalties for mismatches
-
-# Performing an alignment
+# Performing sequence alignment
 
 ## Tools
 
-* Bowtie2 
-* Samtools
+* Anaconda (https://docs.conda.io/en/latest/miniconda.html)
+* Bowtie2 (https://github.com/BenLangmead/bowtie2)
 
 ## Data
 
-* [https://mbp-tech-talks.github.io/2019-2020/02-sequence-alignment/data/](https://mbp-tech-talks.github.io/2019-2020/02-sequence-alignment-data/)
+* [https://bit.ly/2BkwQF0](https://utoronto-my.sharepoint.com/:f:/g/personal/james_hawley_mail_utoronto_ca/Ep0Dx9zDRUFDjD_ZkEV_kxQB5m3g61VOOf7Hkl1-q7mfZw?e=1aEFmm)
 * Reference (FASTA)
-* Bowtie2 index (`.bwt2`)
+* Bowtie2 index (`.bt2`)
 * DNA sequences (FASTQ)
 
 ## Alignment process
@@ -207,6 +240,5 @@ See `boyer-moore.py`.
 
 * DNA sequences as strings of characters
 * Naive and Boyer-Moore Algorithms
-* Hamming and edit distance
-* Smith-Waterman algorithm
+* Edit distance
 * Aligned a FASTQ to a reference genome
