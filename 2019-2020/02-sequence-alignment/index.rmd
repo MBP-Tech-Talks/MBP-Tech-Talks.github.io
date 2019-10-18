@@ -1,5 +1,5 @@
 ---
-title: Sequence Slignment
+title: Sequence Alignment
 output:
     ioslides_presentation:
         incremental: true
@@ -8,6 +8,7 @@ output:
 author: James Hawley
 date: 2019-10-18
 autosize: true
+widescreen: true
 ---
 
 ```{r setup, include=FALSE}

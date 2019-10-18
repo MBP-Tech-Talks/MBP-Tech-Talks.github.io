@@ -13,6 +13,7 @@ def naive(s, t):
     return occurrences, counter
 
 def print_naive(s, t):
+    """Wrapper function to pretty print alignments"""
     print(t)
     occurrences, counter = naive(s, t)
     for i in occurrences:

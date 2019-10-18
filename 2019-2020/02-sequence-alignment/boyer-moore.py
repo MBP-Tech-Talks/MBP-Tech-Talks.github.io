@@ -7,12 +7,14 @@ import string
 
 def boyer_moore(s, p_bm, t):
     """ Do Boyer-Moore matching """
+    counter = 0
     i = 0                                                       # start position of 
     occurrences = []
     while i < len(t) - len(s) + 1:
         shift = 1
         mismatched = False
         for j in range(len(s)-1, -1, -1):
+            counter += 1
             if s[j] != t[i+j]:
                 skip_bc = p_bm.bad_character_rule(j, t[i+j])
                 skip_gs = p_bm.good_suffix_rule(j)
@@ -24,7 +26,7 @@ def boyer_moore(s, p_bm, t):
             skip_gs = p_bm.match_skip()
             shift = max(shift, skip_gs)
         i += shift
-    return occurrences
+    return occurrences, counter
 
 def z_array(s):
     """ Use Z algorithm (Gusfield theorem 1.4.1) to preprocess s """
@@ -185,3 +187,22 @@ class BoyerMoore(object):
     def match_skip(self):
         """ Return amount to shift in case where P matches T """
         return len(self.small_l_prime) - self.small_l_prime[1]
+
+
+def print_bm(s, p_bm, t):
+    """Wrapper function to pretty print alignments"""
+    print(t)
+    occurrences, counter = boyer_moore(s, p_bm, t)
+    for i in occurrences:
+        print(' ' * i + s)
+    print(occurrences)
+    print(counter, 'comparisons')
+    print('')
+    return occurrences
+
+
+S = ['TATC', 'AAA', 'ACGG']
+T = ['TATCGTGA', 'AAAAAAAAAAAAAAAA', 'GTGTGTGTGTGTGTGTGTGT']
+for s, t in zip(S, T):
+    p_bm = BoyerMoore(s)
+    print_bm(s, p_bm, t)
