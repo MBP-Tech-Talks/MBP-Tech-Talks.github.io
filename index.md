@@ -10,6 +10,14 @@ We are a group of students primarily in the [Department of Medical Biophysics](h
 
 Our full schedule of talks, including links to past presentations, can be found [in our Google Sheets spreadsheet](https://bit.ly/MBP-tech-talks).
 
+## Past Presentations
+
+See our full set of presentations for previous years.
+
+* [2016-2017](/2016-2017/)
+<!-- * [2017-2018](/2017-2018/)
+* [2018-2019](/2018-2019/) -->
+
 ## GitHub
 
 Our presentations, and other information, is available on our [GitHub repo](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/)
