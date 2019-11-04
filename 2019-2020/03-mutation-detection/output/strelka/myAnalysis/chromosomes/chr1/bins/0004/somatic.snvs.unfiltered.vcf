@@ -1,0 +1,29 @@
+##fileformat=VCFv4.1
+##fileDate=20191101
+##source=strelka
+##source_version=2.0.17.strelka1
+##startTime=Fri Nov  1 13:43:29 2019
+##cmdline=/mnt/work1/software/strelka/1.0.14/libexec/strelka2 -clobber -filter-unanchored -min-paired-align-score 20 -min-single-align-score 10 -min-qscore 0 -report-range-begin 100000001 -report-range-end 125000000 -samtools-reference /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/references/hg19_sub.fa -max-window-mismatch 3 20 -print-used-allele-counts -bam-seq-name chr1 -genome-size 434205347 -max-indel-size 50 -indel-nonsite-match-prob 0.5 --min-contig-open-end-support 35 --somatic-snv-rate 0.000001 --shared-site-error-rate 0.0000005 --shared-site-error-strand-bias-fraction 0.5 --somatic-indel-rate 0.000001 --shared-indel-error-rate 0.000001 --tier2-min-single-align-score 5 --tier2-min-paired-align-score 5 --tier2-single-align-score-rescue-mode --tier2-mismatch-density-filter-count 10 --tier2-no-filter-unanchored --tier2-indel-nonsite-match-prob 0.25 --tier2-include-singleton --tier2-include-anomalous -bam-file /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/bam_files/ANormal.bam --tumor-bam-file /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/bam_files/ATumour.bam --somatic-snv-file /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/output/strelka/myAnalysis/chromosomes/chr1/bins/0004/somatic.snvs.unfiltered.vcf --somatic-indel-file /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/output/strelka/myAnalysis/chromosomes/chr1/bins/0004/somatic.indels.unfiltered.vcf --variant-window-flank-file 50 /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/output/strelka/myAnalysis/chromosomes/chr1/bins/0004/somatic.indels.unfiltered.vcf.window --report-file /mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/output/strelka/myAnalysis/chromosomes/chr1/bins/0004/strelka.stats
+##reference=file:///mnt/work1/users/lupiengroup/People/hawleyj/MBP_Tech_Talk_Exercise/references/hg19_sub.fa
+##contig=<ID=chr1,length=249250621>
+##contig=<ID=chr11,length=135006516>
+##contig=<ID=chr17,length=81195210>
+##content=strelka somatic snv calls
+##germlineSnvTheta=0.001
+##priorSomaticSnvRate=1e-06
+##INFO=<ID=QSS,Number=1,Type=Integer,Description="Quality score for any somatic snv, ie. for the ALT allele to be present at a significantly different frequency in the tumor and normal">
+##INFO=<ID=TQSS,Number=1,Type=Integer,Description="Data tier used to compute QSS">
+##INFO=<ID=NT,Number=1,Type=String,Description="Genotype of the normal in all data tiers, as used to classify somatic variants. One of {ref,het,hom,conflict}.">
+##INFO=<ID=QSS_NT,Number=1,Type=Integer,Description="Quality score reflecting the joint probability of a somatic variant and NT">
+##INFO=<ID=TQSS_NT,Number=1,Type=Integer,Description="Data tier used to compute QSS_NT">
+##INFO=<ID=SGT,Number=1,Type=String,Description="Most likely somatic genotype excluding normal noise states">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic mutation">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth for tier1 (used+filtered)">
+##FORMAT=<ID=FDP,Number=1,Type=Integer,Description="Number of basecalls filtered from original read depth for tier1">
+##FORMAT=<ID=SDP,Number=1,Type=Integer,Description="Number of reads with deletions spanning this site at tier1">
+##FORMAT=<ID=SUBDP,Number=1,Type=Integer,Description="Number of reads below tier1 mapping quality threshold aligned across this site">
+##FORMAT=<ID=AU,Number=2,Type=Integer,Description="Number of 'A' alleles used in tiers 1,2">
+##FORMAT=<ID=CU,Number=2,Type=Integer,Description="Number of 'C' alleles used in tiers 1,2">
+##FORMAT=<ID=GU,Number=2,Type=Integer,Description="Number of 'G' alleles used in tiers 1,2">
+##FORMAT=<ID=TU,Number=2,Type=Integer,Description="Number of 'T' alleles used in tiers 1,2">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NORMAL	TUMOR

@@ -1,0 +1,4 @@
+@HD	VN:1.5	SO:unsorted
+@SQ	SN:chr1	LN:249250621	M5:1b22b98cdeb4a9304cb5d48026a85128	UR:file:/mnt/work1/users/pughlab/sandbox/MBP_Tech_Talk_Exercise/bed_files/hg19_sub.fa
+@SQ	SN:chr11	LN:135006516	M5:98c59049a2df285c76ffb1c6db8f8b96	UR:file:/mnt/work1/users/pughlab/sandbox/MBP_Tech_Talk_Exercise/bed_files/hg19_sub.fa
+@SQ	SN:chr17	LN:81195210	M5:351f64d4f4f9ddd45b35336ad97aa6de	UR:file:/mnt/work1/users/pughlab/sandbox/MBP_Tech_Talk_Exercise/bed_files/hg19_sub.fa
