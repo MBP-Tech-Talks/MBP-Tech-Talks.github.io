@@ -13,7 +13,7 @@ You can find all of our talks listed below.
 * [01 - DNA Sequencing (James Hawley)](/2019-2020/01-dna-sequencing/)
 * [02 - Sequence Alignment (James Hawley)](/2019-2020/02-sequence-alignment/)
 * [03 - Detecting mutations in DNA sequencing data (Jeff Bruce)](/2019-2020/03-mutation-detection/mutation-detection_jeff-bruce.pdf)
-  * [Additional scripts]()
+  * [Additional scripts](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/03-mutation-detection)
 
 ## For presenters
 
