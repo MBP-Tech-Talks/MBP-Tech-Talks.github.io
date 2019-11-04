@@ -15,8 +15,8 @@ Our full schedule of talks, including links to past presentations, can be found 
 See our full set of presentations for previous years.
 
 * [2016-2017](/2016-2017/)
-<!-- * [2017-2018](/2017-2018/)
-* [2018-2019](/2018-2019/) -->
+* [2017-2018](/2017-2018/)
+<!-- * [2018-2019](/2018-2019/) -->
 
 ## GitHub
 
