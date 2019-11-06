@@ -2,7 +2,7 @@
 ---
 # 2016 - 2017 Tech Talks
 
-In this folder you can find all the presentations for the 2016-2017 academic year.
+Here you can find all the presentations for the 2016-2017 academic year.
 
 ## Presentations
 

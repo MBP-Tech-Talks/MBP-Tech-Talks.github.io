@@ -2,7 +2,7 @@
 ---
 # 2018 - 2019 Tech Talks
 
-In this folder you can find all the presentations for the 2018-2018 academic year.
+Here you can find all the presentations for the 2018-2018 academic year.
 
 ## Presentations
 
