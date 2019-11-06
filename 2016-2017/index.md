@@ -13,7 +13,7 @@ You can find all of our talks listed below.
 * [Jupyter notebooks (Mickael Mendez)](https://github.com/MBP-Tech-Talks/2017-01-20_mbp)
 * [Introduction to machine learning and k nearest neighbours (Davide Chicco)](./intro-to-ml-knn_davide-chicco.pdf)
 * [RNA sequencing (Musa Ahmed)](./rna-seq_musa-ahmed.pdf)
-  * ([Slideshare link](https://www.slideshare.net/secret/FZT5Oel4KfA42H))
+  * [Slideshare link](https://www.slideshare.net/secret/FZT5Oel4KfA42H)
 * [Introduction to LaTeX (Francis Nguyen)](./intro-latex_francis-nguyen.pdf)
 * [Building and validating prognostic models (Olli Saarela)](./prognostic-modeling_olli-saarela.pdf)
 * [Copy number calling and interpretation (Rene Quevedo)](https://docs.google.com/presentation/d/e/2PACX-1vTYvvBY7yFHJ4HrxN2sJH9Fy2yflgZb0shPR5WdlPDgX284Bm35Tokdf-mtz8F_hOxhXccOBMXvFyYb/pub)
