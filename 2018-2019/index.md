@@ -13,7 +13,7 @@ You can find all of our talks listed below.
   * [Source code](https://github.com/p-smirnov/Intro2RPart1)
 * [Introduction to R - Part 2 (Danton Ivanochko)](intro-r-part-2_danton-ivanochko.pdf)
 * [Introduction to programming with Python (Francis Nguyen)](https://docs.google.com/presentation/d/e/2PACX-1vTDFrU-HzYNLka6v0xtCSs0rjT-SWlzppoKuuCHXTA-6XEabmGbX3acYCJlWYWRqtglin043oZlcu7s/pub)
-  * [Jupyter notebook](intro-python-notebook_francis-nguyen.ipynb)
+  * [Jupyter notebook](https://nbviewer.jupyter.org/github/MBP-Tech-Talks/MBP-Tech-Talks.github.io/blob/master/2018-2019/intro-python-notebook_francis-nguyen.ipynb)
 * [Data visualization with ggplot2 (Antoine Beauchamp)](data-visualization_antoine-beauchamp.pdf)
 * [Introduction to machine learning and deep learning (Grey Kuling)](intro-deep-learning_grey-kuling.pptx)
 * [Introduction to scientific illustrations (Carly Pellow & Jenny Lou)](scientific-illustrations_carly-pellow_jenny-lou.pptx)
