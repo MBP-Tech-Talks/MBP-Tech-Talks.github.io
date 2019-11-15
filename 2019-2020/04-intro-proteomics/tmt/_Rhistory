@@ -1,0 +1,507 @@
+source("D:/R_scripts/mqlib_prot.R")
+theme_set(plot_theme())
+exo <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190917_mbr_exo/R_tableOutput/summary.txt")
+head(exo)
+exo <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190917_mbr_exo/R_tableOutput/summary.txt")
+exo <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190917_mbr_exo/R_tableOutput/lfq_df.txt")
+exo <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190917_mbr_exo/R_tableOutput/proteinCounts_mbr.txt")
+mv <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190925_mv_mbr//R_tableOutput/proteinCounts_mbr.txt")
+head(mv)
+head(exo)
+getSampleIDs()
+View(getSampleIDs)
+exo_id <- getSampleIDs(exo$sample)
+head(exo_id)
+exo_new_id <- str_glue_data("{DRE}_{patient}_{timepoint}", exo_id)
+exo_new_id <- str_glue_data(exo_id, "{DRE}_{patient}_{timepoint}")
+exo_new_id
+exo$sample <- str_glue_data(exo_id, "{DRE}_{patient}_{timepoint}")
+mv_id <- getSampleIDs(mv$sample)
+mv$sample <- str_glue_data(mv_id, "{DRE}_{patient}_{timepoint}")
+head(mv)
+names(mv) <- gsub("value", "mv", names(mv))
+names(exo) <- gsub("value", "exo", names(exo))
+source("D:/R_scripts/mqlib_prot.R")
+theme_set(plot_theme())
+exo <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190917_mbr_exo/R_tableOutput/proteinCounts_mbr.txt")
+exo$sample <- gsub("B1297", "B1287", exo$sample)
+mv <- pgRead("D:/PCa_Discovery/Data_analysis_files/txt_190925_mv_mbr//R_tableOutput/proteinCounts_mbr.txt")
+exo_id <- getSampleIDs(exo$sample)
+exo$sample <- str_glue_data(exo_id, "{DRE}_{patient}_{timepoint}")
+mv_id <- getSampleIDs(mv$sample)
+mv$sample <- str_glue_data(mv_id, "{DRE}_{patient}_{timepoint}")
+names(exo) <- gsub("value", "exo", names(exo))
+names(mv) <- gsub("value", "mv", names(mv))
+exo <- subset(exo, variable == "MS2")
+mv <- subset(mv, variable == "MS2")
+head(exo)
+new_df <- merge(exo, mv, by = "sample")
+new_df <- merge(exo, mv, by = "sample", all = TRUE)
+head(new_df)
+new_df$variable.x <- NULL
+new_df$variable.y <- NULL
+head(new_df)
+ggplot(new_df, aes(exo, mv))+
+geom_point()
+ggplot(new_df, aes(exo, mv))+
+geom_point()+
+geom_smooth(method = "lm", formula = y~x)
+ggplot(new_df, aes(exo, mv))+
+geom_point()+
+geom_smooth(method = "lm", formula = y~x, se = FALSE)
+rsq <- lm(new_df$exo ~ new_df$mv)
+lm(new_df$exo ~ new_df$mv)
+summary(lm(new_df$exo ~ new_df$mv))
+str(rsq)
+rsq <- summary(lm(new_df$exo ~ new_df$mv))$r.squared
+# Load source file
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# Load source file
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# Load source file
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# Load source file
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# Load source file
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# remove false hits
+df <- rawdata %>%
+filter(rawdata, Potential.contaminant != "+") %>%
+filter(Reverse != "+") %>%
+filter(Only.identified.by.site != "+")
+library(dplyr)
+install.packages("rlang")
+library(dplyr)
+install.packages("dplyr")
+library(dplyr)
+install.packages("purr")
+install.packages("purrr")
+library(dplyr)
+# Load source file
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# remove false hits
+df <- subset(df, Reverse != "+")
+df <- subset(rawdata, Reverse != "+")
+df <- subset(rawdata, Contaminants != "+")
+df <- subset(rawdata, Potential.contaminant != "+")
+df <- subset(rawdata, Only.identified.by.site != "+")
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# Load source file
+source("source_file.R")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+df <- pgRemoveRev(rawdata)
+df <- pgRemoveCon(df)
+df <- pgRemoveIDbySite(df)
+# set minimum 2 peptide threshold
+df <- pgMinPept(df)
+head(df)
+pgMinPept()
+source('D:/Other_projects/MBP_tech_talks/source_file.R')
+# get lfq intensity
+lfq <- pgGetLFQ(df)
+head(lfq)
+# plot histogram of intensities
+hist(lfq)
+# plot histogram of intensities
+hist(lfq)
+str(lfq)
+is.numeric(lfq)
+is.numeric(lfq$WCL_22Rv1_1)
+is.numeric(lfq$WCL_22Rv1_2)
+is.numeric(lfq$WCL_22Rv1_3)
+is.numeric(lfq$WCL_DU145_1)
+is.numeric(lfq$WCL_DU145_2)
+is.numeric(lfq$WCL_DU145_3)
+is.numeric(lfq$WCL_DU145_4)
+is.numeric(lfq$WCL_LNCaP_1)
+is.numeric(lfq$WCL_LNCaP_2)
+is.numeric(lfq$WCL_LNCaP_3)
+is.numeric(lfq$WCL_LNCaP_4)
+is.numeric(lfq$WCL_PC3_1)
+is.numeric(lfq$WCL_PC3_2)
+is.numeric(lfq$WCL_PC3_3)
+is.numeric(lfq$WCL_PC3_4)
+is.numeric(lfq$WCL_RWPE1_1)
+is.numeric(lfq$WCL_RWPE1_2)
+is.numeric(lfq$WCL_RWPE1_3)
+names(lfq)
+# plot histogram of intensities
+hist(as.numeric(lfq))
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# Load source file
+source("source_file.R")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# remove false hits
+df <- pgRemoveRev(rawdata)
+df <- pgRemoveCon(df)
+df <- pgRemoveIDbySite(df)
+# set minimum 2 peptide threshold
+df <- pgMinPept(df)
+# get lfq intensity
+lfq <- pgGetLFQ(df)
+# plot histogram of intensities
+# plot histogram of intensities
+hist(lfq)
+# add protein names
+lfq$protein <- df$Majority.protein.IDs
+# plot histogram of intensities
+m_lfq <- melt(lfq, id.vars = c("proteins"))
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# Load source file
+source("source_file.R")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# remove false hits
+df <- pgRemoveRev(rawdata)
+df <- pgRemoveCon(df)
+df <- pgRemoveIDbySite(df)
+# set minimum 2 peptide threshold
+df <- pgMinPept(df)
+# get lfq intensity
+lfq <- pgGetLFQ(df)
+# add protein names
+lfq$proteins <- df$Majority.protein.IDs
+# plot histogram of intensities
+m_lfq <- melt(lfq, id.vars = c("proteins"))
+head(m_lfq)
+hist(m_lfq$value)
+summary(lfq)
+ggplot(m_lfq, aes(variable, value))+
+geom_histogram()
+ggplot(m_lfq, aes(value))+
+geom_histogram()
+# set working directory
+setwd("D:/Other_projects/MBP_tech_talks/")
+# Load source file
+source("source_file.R")
+# read in proteinGroups.txt file
+rawdata <- read.table("proteinGroups.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
+# view dimensions
+dim(rawdata)
+# view column name
+names(rawdata)
+# remove false hits
+df <- pgRemoveRev(rawdata)
+df <- pgRemoveCon(df)
+df <- pgRemoveIDbySite(df)
+# set minimum 2 peptide threshold
+df <- pgMinPept(df)
+# get lfq intensity
+lfq <- pgGetLFQ(df)
+# impute 0 with NA
+lfq[lfq == 0] <- NA
+# add protein names
+lfq$proteins <- df$Majority.protein.IDs
+# plot histogram of intensities
+m_lfq <- melt(lfq, id.vars = c("proteins"))
+ggplot(m_lfq, aes(value))+
+geom_histogram()
+head(lfq)
+ggplot(m_lfq, aes(value))+
+geom_histogram()+
+xlim(0, 1e10)
+ggplot(m_lfq, aes(value))+
+geom_histogram()+
+xlim(0, 3e9)
+# plot histogram of intensities
+hist(lfq$WCL_22Rv1_1)
+# plot histogram of intensities
+ggplot(lfq, aes(lfq[,1]))+
+geom_histogram()+
+scale_y_log10()
+# plot histogram of intensities
+ggplot(lfq, aes(lfq[,1]))+
+geom_histogram(color = "black", fill = "white")+
+scale_y_log10()
+# plot histogram of intensities
+ggplot(lfq, aes(lfq[,2]))+
+geom_histogram(color = "black", fill = "white")+
+scale_y_log10()
+# plot histogram of intensities
+ggplot(lfq, aes(lfq[,5]))+
+geom_histogram(color = "black", fill = "white")+
+scale_y_log10()
+m_lfq <- melt(lfq, id.vars = "proteins")
+ggplot(m_lfq, aes(value, color = variable))+
+geom_density()
+ggplot(m_lfq, aes(value, color = variable))+
+geom_density()+
+scale_x_log10()
+ggplot(m_lfq, aes(value, color = variable))+
+geom_density()+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_density()+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_histogram()+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_histogram(fill = NA)+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_histogram(fill = NULL)+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_histogram(fill = "white")+
+scale_y_log10()
+ggplot(m_lfq, aes(value, color = variable))+
+geom_histogram(fill = "white")+
+scale_y_log10()
+ggplot(m_lfq, aes(value, color = variable))+
+geom_density()+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_density(adjust = 3)+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_density(adjust = 6)+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_density(adjust = 10)+
+scale_y_log10()
+ggplot(m_lfq, aes(value))+
+geom_density(adjust = 10)
+ggplot(m_lfq, aes(value))+
+geom_density(adjust = 2)
+ggplot(m_lfq, aes(value, color = variable))+
+geom_density()
+# log-2 transform data
+lfq_log2 <- log(lfq, 2)
+lfq <- select(lfq, "proteins", everything())
+# log-2 transform data
+lfq[-1] <- log(lfq[-1], 2)
+m_lfq <- melt(lfq, id.vars = "proteins")
+ggplot(m_lfq, aes(value, color = variable))+
+geom_density()
+head(lfq)
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point()
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)
+lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_22Rv1_2)
+summary(lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_22Rv1_2))$p.value
+summary(lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_22Rv1_2))$p_value
+summary(lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_22Rv1_2))$r.sq
+rsq_annot <- summary(lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_22Rv1_2))$r.sq
+?annotate
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 30, y = 30, rsq_annot)
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 30, y = 30, label = rsq_annot)
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 15, y = 30, label = rsq_annot)
+rsq_round <- round(rsq_annot, 2)
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round)
+rsq_round <- paste("R-squared = " round(rsq_annot, 2), sep = "")
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round)
+rsq_round <- paste("R-squared = " round(rsq_annot, 2), sep = ""))
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round)
+rsq_round <- paste("R-squared = ", round(rsq_annot, 2), sep = ""))
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round)
+rsq_round <- paste("R-squared = ", round(rsq_annot, 2), sep = "")
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round)
+ggplot(lfq, aes(lfq[,2], lfq[,3]))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round, size = 5)
+rsq_annot <- summary(lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_LNCaP_1))$r.sq
+rsq_round <- paste("R-squared = ", round(rsq_annot, 2), sep = "")
+ggplot(lfq, aes(lfq$WCL_22Rv1_1, lfq$WCL_LNCaP_1))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round, size = 5)
+rsq_annot <- summary(lm(lfq$WCL_22Rv1_1 ~ lfq$WCL_22Rv1_2))$r.sq
+rsq_round <- paste("R-squared = ", round(rsq_annot, 2), sep = "")
+ggplot(lfq, aes(lfq$WCL_22Rv1_1, lfq$WCL_22Rv1_2))+
+geom_point(shape = 1, alpha = 0.5)+
+annotate("text", x = 20, y = 35, label = rsq_round, size = 5)
+source("D:/Other_projects/MBP_tech_talks/source_code.R")
+source("D:/Other_projects/MBP_tech_talks/source_file.R")
+setwd("D:/Other_projects/MBP_tech_talks/tmt/")
+rawdata <- read.table("proteinGroups.txt", sep = "\t", header = T)
+rawdata <- read.table("proteinGroups.txt", sep = "\t", header = T, stringsAsFactors = FALSE)
+names(rawdata)
+# fractions
+fraction_col <- grep("^Fraction.", names(rawdata))
+fraction_df <- rawdata[,fraction_col]
+head(fraction_df)
+# reporter ion intensities
+reporter_int <- rawdata[, grep("^Reporter.intensity...FKH", names(rawdata))]
+head(reporter_int)
+source("D:/Other_projects/MBP_tech_talks/source_file.R")
+setwd("D:/Other_projects/MBP_tech_talks/tmt/")
+rawdata <- read.table("proteinGroups.txt", sep = "\t", header = T, stringsAsFactors = FALSE)
+# filter data
+df <- pgRemoveRev(rawdata)
+df <- pgRemoveCon(df)
+df <- pgRemoveIDbySite(df)
+df <- pgMinPept(df)
+# fractions
+fraction_col <- grep("^Fraction.", names(df))
+# number of spectra in each fraction
+fraction_df <- df[,fraction_col]
+# reporter ion intensities
+reporter_int <- df[, grep("^Reporter.intensity...FKH", names(df))]
+reporter_int[reporter_int == 0] <- NA # impute 0 values with NA
+reporter_int <- log(reporter_int, 2) # log2 transform
+head(reporter_int)
+reporter_int$proteins <- df$Majority.protein.IDs
+reporter_int <- select(reporter_int, "proteins", everything())
+head(reporter_int)
+reporter_int$genes <- df$Gene.names
+reporter_int <- select(reporter_int, c("proteins", "genes"), everything())
+head(reporter_int)
+# plot intensities for first protein
+plot_data <- subset(reporter_int, genes == "GAPDH")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+head(m_plot_data)
+# rename columns
+sample_names <- NULL
+for (i in 1:10) {
+sample_names[i] <- paste("Sample_", i, sep = "")
+}
+sample_names
+names(reporter_int) <- c("proteins", "genes", sample_names)
+head(reporter_int)
+# plot intensities for GAPDH protein
+plot_data <- subset(reporter_int, genes == "GAPDH")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+ggplot(m_plot_data, aes(variable, value))
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")
+ggplot(m_plot_data, aes(variable, value))+
+geom_point()
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")
+# plot intensities for GAPDH protein
+plot_data <- subset(reporter_int, genes == "ALB")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")+
+labs(title = m_plot_data$genes)
+# plot intensities for GAPDH protein
+plot_data <- subset(reporter_int, genes == "MYC")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")+
+labs(title = m_plot_data$genes)
+# plot intensities for GAPDH protein
+plot_data <- subset(reporter_int, genes == "TUB1A")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")+
+labs(title = m_plot_data$genes)
+# plot intensities for GAPDH protein
+plot_data <- subset(reporter_int, genes == "GAPDH")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")+
+labs(title = m_plot_data$genes)
+source("D:/Other_projects/MBP_tech_talks/source_file.R")
+setwd("D:/Other_projects/MBP_tech_talks/tmt/")
+rawdata <- read.table("proteinGroups.txt", sep = "\t", header = T, stringsAsFactors = FALSE)
+# filter data
+df <- pgRemoveRev(rawdata)
+df <- pgRemoveCon(df)
+df <- pgRemoveIDbySite(df)
+df <- pgMinPept(df)
+# fractions
+fraction_col <- grep("^Fraction.", names(df))
+# number of spectra in each fraction
+fraction_df <- df[,fraction_col]
+# reporter ion intensities (MS2 level quantitation)
+reporter_int <- df[, grep("^Reporter.intensity...FKH", names(df))]
+reporter_int[reporter_int == 0] <- NA # impute 0 values with NA
+reporter_int <- log(reporter_int, 2) # log2 transform
+# add protein names
+reporter_int$proteins <- df$Majority.protein.IDs
+reporter_int$genes <- df$Gene.names
+reporter_int <- select(reporter_int, c("proteins", "genes"), everything())
+# rename columns
+sample_names <- NULL
+for (i in 1:10) {
+sample_names[i] <- paste("Sample_", i, sep = "")
+}
+names(reporter_int) <- c("proteins", "genes", sample_names)
+# plot intensities for GAPDH protein
+plot_data <- subset(reporter_int, genes == "GAPDH")
+m_plot_data <- melt(plot_data, id.vars = c("genes", "proteins"))
+ggplot(m_plot_data, aes(variable, value))+
+geom_bar(stat = "identity")+
+labs(title = m_plot_data$genes)
+# MS1 peptide intensity (summed)
+ms1_int <- df[, grep("^iBAQ", names(df))]
+ms1_int
