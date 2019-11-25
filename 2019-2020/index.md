@@ -17,6 +17,7 @@ Here you can find all the presentations for the 2019-2020 academic year.
   * [Additional scripts](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/05-rna-seq)
 * [06 - DNA methylation analysis (Mehran Karimzadeh)](/2019-2020/06-dna-methylation/)
   * [Additional scripts](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/06-dna-methylation)
+  * [Installation notes for workshop](installation-notes/)
 * 07 - Proteo-genomics analysis (Lydia Liu)
 * 08 - Chromosome conformation capture and the 3D genome (James Hawley)
 
