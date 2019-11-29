@@ -18,16 +18,16 @@ Here you can find all the presentations for the 2019-2020 academic year.
 * [06 - DNA methylation analysis (Mehran Karimzadeh)](/2019-2020/06-dna-methylation/)
   * [Additional scripts](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/06-dna-methylation)
   * [Installation notes for workshop](installation-notes/)
-* 07 - Proteo-genomics analysis (Lydia Liu)
+* [07 - Proteo-genomics analysis (Lydia Liu)](/2019-2020/07-intro-proteogenomics/intro-proteomics_lydia-liu.pdf)
 * 08 - Chromosome conformation capture and the 3D genome (James Hawley)
 
 Links to presentations will be added after the seminar.
 
 ## For presenters
 
-* Presentations are in [HSB 100](http://map.utoronto.ca/building/154)(155 College Street, right of the elevators, by the women's washroom)
+* Presentations are in [HSB 100](http://map.utoronto.ca/building/154) (155 College Street, right of the elevators, by the women's washroom)
 * Room is booked from 12:00 to 14:00 on Fridays
   * Please show up ahead of time to minimize setup time
 * There is a teaching station with a projector and blackboard
 
-![HSB Map](hsb-map.png)
+[![HSB Map](hsb-map.png)](http://map.utoronto.ca/building/154)
