@@ -74,9 +74,8 @@ $(document).ready(function() {
 
 ## Regulation of gene expression is partially mediated by chromatin organization
 
-![RNA PolII binds to promoter regions]()
-
-* Promoter-enhancer loops brings these loci together
+![](figures/e-p-loops.png)
+<footnote>Adapted from: Zhou _et al._, Cancer Discovery, 2016, doi:10.1158/2159-8290.CD-16-0745</footnote>
 
 ## Hubs of preferential chromatin interaction bring multiple distal regions together
 
@@ -106,6 +105,9 @@ $(document).ready(function() {
 ![](figures/brachydactyl-examples.png){width=500px}
 <footnote>Lupianez et al., Cell, 2016. doi:10.1016/j.cell.2016.10.024</footnote>
 
+* Structural variants lead to enhancer hijacking 
+* Misregulation in embryogenesis leads to developmental defects
+
 </div>
 
 ## Aberrations of chromatin organization can cause disease | Cancer
@@ -117,7 +119,7 @@ $(document).ready(function() {
 * Methylation blocked CTCF binding
 * Enhancer hijacking to express _FGF4_ oncogene
 
-## Measuring chromatin organization(3C)
+## Measuring chromatin organization
 
 <div class="column-2">
 ![](figures/3c.jpg){width=400px}
@@ -128,7 +130,7 @@ $(document).ready(function() {
 * Proximity ligation
 </div>
 
-## Measure chromatin organization across with genome with HiC
+## Measure chromatin organization across with genome
 
 ![](figures/hic-protocol.png)
 <footnote>Lieberman-Aiden _et al._, Science, 2009, doi:10.1126/science.1181369</footnote>
