@@ -1,0 +1,215 @@
+---
+title: Chromatin conformation capture and the 3D genome
+output:
+    ioslides_presentation:
+        incremental: true
+        transition: faster
+        css: ../style.css
+author: James Hawley
+date: 2019-12-06
+autosize: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
+
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
+  });
+});
+</script>
+
+## Outline | Part 1: Chromatin conformation capture
+
+* The physical role of chromatin organization in the central dogma
+* Aberrations of chromatin organization in disease
+* Chromatin conformation capture (3C)
+* HiC: a genome-wide extension of 3C
+* Analytical methods of HiC data
+
+# Chromatin conformation capture
+
+## DNA molecules are three dimensional
+
+<div class="columns-2">
+
+![](figures/dna-shape.png){width=250px}
+<footnote>Alberts, Molecular biology of the cell, 6ed. pg. 176</footnote>
+
+* DNA is a double-stranded, helical polymer
+* Chromosomes are contiguous strands of DNA
+* Long strands folded up to take up small space
+</div>
+
+## Chromatin across the length scales
+
+![](figures/chromatin.1.png)
+
+## Chromatin across the length scales
+
+![](figures/chromatin.2.png)
+
+## Chromatin across the length scales
+
+![](figures/chromatin.3.png)
+
+## Chromatin across the length scales
+
+![](figures/chromatin.4.png)
+
+<footnote>Finn & Misteli, Science, 2019, doi:10.1126/science.aaw9498</footnote>
+
+## Regulation of gene expression is partially mediated by chromatin organization
+
+![RNA PolII binds to promoter regions]()
+
+* Promoter-enhancer loops brings these loci together
+
+## Hubs of preferential chromatin interaction bring multiple distal regions together
+
+![](figures/multiple-contacts.png)
+<footnote>Finn & Misteli, Science, 2019, doi:10.1126/science.aaw9498</footnote>
+
+* Hubs are called topologically associated domains (TADs)
+
+## TADs and loops are formed by looping factors
+
+![](figures/loop-extrusion.png)
+<footnote>Adapted from: Rowley & Corces, Nature Reviews Genetics, 2018, doi:10.1038/s41576-018-0060-8</footnote>
+
+## Current leading model of loop formation: loop extrusion
+
+![](https://www.youtube.com/watch?v=8FW6gOx5lPI)
+<footnote>Fudenberg, Abdennur, _et al._, CSH Symposia on Quantitative Biology, 2018, doi:10.1101/sqb.2017.82.034710</footnote>
+
+## Current leading model of loop formation: loop extrusion
+
+![](https://science.sciencemag.org/highwire/filestream/706106/field_highwire_adjunct_files/7/aar7831s5.mp4)
+<footnote>Ganji _et al._, Science, 2018, doi:10.1126/science.aar7831</footnote>
+
+## Aberrations of chromatin organization can cause disease | Brachydactly and polydactyly
+
+<div class="columns-2">
+![](figures/brachydactyl-examples.png){width=500px}
+<footnote>Lupianez et al., Cell, 2016. doi:10.1016/j.cell.2016.10.024</footnote>
+
+</div>
+
+## Aberrations of chromatin organization can cause disease | Cancer
+
+![](figures/gist-model.png){width=400px}
+<footnote>Flavahan _et al._, Nature, 2019, doi:10.1038/s41586-019-1668-3</footnote>
+
+* Methylation of CTCF site in SDH-deficient gastro-intestinal stromal tumours
+* Methylation blocked CTCF binding
+* Enhancer hijacking to express _FGF4_ oncogene
+
+## Measuring chromatin organization(3C)
+
+<div class="column-2">
+![](figures/3c.jpg){width=400px}
+<footnote>Dekker _et al._, Science, 2002, doi:10.1126/science.1067799</footnote>
+
+* Chromosome fixation
+* Restriction digest
+* Proximity ligation
+</div>
+
+## Measure chromatin organization across with genome with HiC
+
+![](figures/hic-protocol.png)
+<footnote>Lieberman-Aiden _et al._, Science, 2009, doi:10.1126/science.1181369</footnote>
+
+* Biotinylation for pull down
+* Shearing
+* Sequencing
+
+## Visualizing interactions
+
+<div class="columns-2">
+![](figures/first-hic-matrix.png){width=450px}
+<footnote>Lieberman-Aiden _et al._, Science, 2009, doi:10.1126/science.1181369</footnote>
+
+* Bin genome
+* Aggregate reads
+* Squares are "preferential hubs"
+</div>
+
+## Intra-sample normalization
+
+Biases that exist between bins:
+
+* GC content
+* Number of restriction enzyme cut sites
+* Mappability
+
+## Intra-sample normalization | Iterative correction
+
+<div class="columns-2">
+![](figures/iterative-correction.png){width=300px}
+<footnote>Imakaev _et al._, Nature Methods, 2012, doi:10/gdcfmm
+
+* Doubly-stochastic, symmetric matrix
+* "Equal visibility" between loci
+</div>
+
+## Intra-sample normalization | Iterative correction
+
+![](figures/iced-matrix.png){width=800px}
+<footnote>Imakaev _et al._, Nature Methods, 2012, doi:10/gdcfmm
+
+## Calling TADs
+
+![](figures/topdom.png){width=400px}
+<footnote>Shin, Shi, _et al._, Nucleic Acids Research, 2016, doi:10.1093/nar/gkv1505</footnote>
+
+## Calling Loops | cLoops
+
+![](figures/cloops.png)
+<footnote>Cao, Chen, Chen, Ai, _et al._, Bioinformatics, 2019, doi:10.1093/bioinformatics/btz651</footnote>
+
+## Current methods are still unclear
+
+* Inter-sample normalization is not well-studied
+* Almost as many methods as data resource papers
+* Lots of similarities and differences from typical genome sequencing
+
+# Break
+
+# Workshop
+
+## Outline | Part 2: Workshop
+
+* Quality control of raw HiC data
+* Pre-processing HiC data
+* Calling TADs
+* Visualizing with `cooler`
+
+# Summary
+
+## Summary
+
+* Spatial organization of chromatin within cells affects gene regulation
+* Measurement by sequencing-based techniques
+* Pre-processing tools for HiC data
+* https://mbp-tech-talks.github.io/2019-2020/08-3d-genome/
+
+## What I didn't cover
+
+* Microscopy-based measurements
+* Compartmentalization
+* Changes over cell division
+* Single-cell extensions
