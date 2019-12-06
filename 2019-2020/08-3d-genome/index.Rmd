@@ -200,6 +200,10 @@ Biases that exist between bins:
 * Pre-processing HiC data
 * Visualizing with `cooler`
 
+## Workshop
+
+* https://mbp-tech-talks.github.io/2019-2020/08-3d-genome/workshop/
+
 # Summary
 
 ## Summary
