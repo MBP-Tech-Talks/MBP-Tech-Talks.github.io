@@ -38,10 +38,16 @@ cooler show -o chr6.raw.png 22Rv1.cool chr6
 cooler show -b -o chr6.balanced.png 22Rv1.cool chr6
 ```
 
+Raw chr6 contact matrix
+
 ![Raw contact matrix](22Rv1.chr6.raw.png)
+
+Balanced chr6 contact matrix
 
 ![Balanced contact matrix](22Rv1.chr6.balanced.png)
 
 ## Interactive exploration with Higlass
 
-![](http://higlass.io/l/?d=YE8GZYBBSsaBErYopy8_9g)
+[Higlass](http://higlass.io) is a tool to interactively view HiC and other genomic data in a web browser.
+
+You can see and interact with some [example Higlass data here](http://higlass.io/l/?d=YE8GZYBBSsaBErYopy8_9g).
