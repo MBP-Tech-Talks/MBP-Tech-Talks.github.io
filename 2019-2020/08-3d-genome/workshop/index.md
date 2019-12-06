@@ -14,8 +14,12 @@ pip install cooler matplotlib
 
 ## Data
 
-`22Rv1.hg19.40kbp.txt.gz` contains raw contact counts for chr6 and chr7 of [GSE118629](https://ncbi.nln.gov/geo/GSE118629).
-It is stored in a sparse matrix coordinate (COO) format where $M_{i,j} = v$ for each row whose columns are $(i, j, v)$.
+| File                                                                                                                                                       | Description                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`22Rv1.hg19.40kbp.txt.gz`](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/raw/master/2019-2020/08-3d-genome/workshop/22Rv1.hg19.40kbp.txt.gz) | Raw contact counts for chr6 and chr7 of [GSE118629](https://ncbi.nln.gov/geo/GSE118629) |
+| [`hg19.40kbp.bed`](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/raw/master/2019-2020/08-3d-genome/workshop/hg19.40kbp.bed)                   | hg19 genome binned into 40kbp bins                                                      |
+
+The contact matrix data is stored in a sparse matrix coordinate (COO) format where $M_{i,j} = v$ for each row whose columns are $(i, j, v)$.
 
 ## Steps
 
