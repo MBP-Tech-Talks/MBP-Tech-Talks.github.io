@@ -1,5 +1,5 @@
 ---
-title: Chromatin conformation capture and the 3D genome
+title: Chromosome conformation capture and the 3D genome
 output:
     ioslides_presentation:
         incremental: true
@@ -8,6 +8,7 @@ output:
 author: James Hawley
 date: 2019-12-06
 autosize: true
+cache: true
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +33,7 @@ $(document).ready(function() {
 });
 </script>
 
-## Outline | Part 1: Chromatin conformation capture
+## Outline | Part 1: Chromosome conformation capture
 
 * The physical role of chromatin organization in the central dogma
 * Aberrations of chromatin organization in disease
@@ -40,13 +41,13 @@ $(document).ready(function() {
 * HiC: a genome-wide extension of 3C
 * Analytical methods of HiC data
 
-# Chromatin conformation capture
+# Chromosome conformation capture
 
 ## DNA molecules are three dimensional
 
 <div class="columns-2">
 
-![](figures/dna-shape.png){width=250px}
+![](figures/dna-shape.png){height=500px}
 <footnote>Alberts, Molecular biology of the cell, 6ed. pg. 176</footnote>
 
 * DNA is a double-stranded, helical polymer
@@ -158,17 +159,17 @@ Biases that exist between bins:
 * Number of restriction enzyme cut sites
 * Mappability
 
-## Intra-sample normalization | Iterative correction
+## Intra-sample normalization
 
 <div class="columns-2">
-![](figures/iterative-correction.png){width=300px}
+![](figures/iterative-correction.png){height=500px}
 <footnote>Imakaev _et al._, Nature Methods, 2012, doi:10/gdcfmm
 
 * Doubly-stochastic, symmetric matrix
 * "Equal visibility" between loci
 </div>
 
-## Intra-sample normalization | Iterative correction
+## Intra-sample normalization
 
 ![](figures/iced-matrix.png){width=800px}
 <footnote>Imakaev _et al._, Nature Methods, 2012, doi:10/gdcfmm
@@ -197,7 +198,6 @@ Biases that exist between bins:
 
 * Quality control of raw HiC data
 * Pre-processing HiC data
-* Calling TADs
 * Visualizing with `cooler`
 
 # Summary
@@ -207,6 +207,7 @@ Biases that exist between bins:
 * Spatial organization of chromatin within cells affects gene regulation
 * Measurement by sequencing-based techniques
 * Pre-processing tools for HiC data
+
 * https://mbp-tech-talks.github.io/2019-2020/08-3d-genome/
 
 ## What I didn't cover

@@ -19,7 +19,8 @@ Here you can find all the presentations for the 2019-2020 academic year.
   * [Additional scripts](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/06-dna-methylation)
   * [Installation notes for workshop](installation-notes/)
 * [07 - Proteo-genomics analysis (Lydia Liu)](/2019-2020/07-intro-proteogenomics/intro-proteomics_lydia-liu.pdf)
-* 08 - Chromosome conformation capture and the 3D genome (James Hawley)
+* [08 - Chromosome conformation capture and the 3D genome (James Hawley)](/2019-2020/08-3d-genome/)
+  * [Workshop](/2019-2020/08-3d-genome/workshop/)
 
 Links to presentations will be added after the seminar.
 
