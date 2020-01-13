@@ -31,4 +31,4 @@ Links to presentations will be added after the seminar.
   * Please show up ahead of time to minimize setup time
 * There is a podium with a projector (HDMI/VGA input) and whiteboard
 
-[![HSB Map](hsb-map.png)](https://www.google.ca/maps/place/Toronto+Medical+Discovery+Tower/@43.6599045,-79.3881754,19.2z/data=!4m5!3m4!1s0x882b34b63e7fb161:0x5b92260a8a6360a9!8m2!3d43.6597878!4d-79.3875671)
+[![Map](pmcrt-map.png)](https://www.google.ca/maps/place/Toronto+Medical+Discovery+Tower/@43.6599045,-79.3881754,19.2z/data=!4m5!3m4!1s0x882b34b63e7fb161:0x5b92260a8a6360a9!8m2!3d43.6597878!4d-79.3875671)
