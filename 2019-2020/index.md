@@ -26,9 +26,9 @@ Links to presentations will be added after the seminar.
 
 ## For presenters
 
-* Presentations are in [HSB 100](http://map.utoronto.ca/building/154) (155 College Street, right of the elevators, by the women's washroom)
-* Room is booked from 12:00 to 14:00 on Fridays
+* Presentations are in [PMCRT Room 4-204](https://www.google.ca/maps/place/Toronto+Medical+Discovery+Tower/@43.6599045,-79.3881754,19.2z/data=!4m5!3m4!1s0x882b34b63e7fb161:0x5b92260a8a6360a9!8m2!3d43.6597878!4d-79.3875671) (101 College Street, East Tower, 4th floor conference room)
+* Room is booked from 11:00 to 13:00 on Mondays
   * Please show up ahead of time to minimize setup time
-* There is a teaching station with a projector and blackboard
+* There is a podium with a projector (HDMI/VGA input) and whiteboard
 
-[![HSB Map](hsb-map.png)](http://map.utoronto.ca/building/154)
+[![HSB Map](hsb-map.png)](https://www.google.ca/maps/place/Toronto+Medical+Discovery+Tower/@43.6599045,-79.3881754,19.2z/data=!4m5!3m4!1s0x882b34b63e7fb161:0x5b92260a8a6360a9!8m2!3d43.6597878!4d-79.3875671)
