@@ -24,9 +24,9 @@ Here you can find all the presentations for the 2019-2020 academic year.
 
 | Session | Date       | Title | Presenter | RSVP | Slides | Workshop |
 | ------- | ---------- | ----- | --------- | ---- | ------ | -------- |
-| 09      | 2020-01-27 | Introduction to machine learning | Davide Chicco | | | |
-| 10      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda | Geoff Woollard | | | |
-| 11      | 2020-02-10 | Medical image processing in Python | Michal Kazmierski | | | |
+| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda | Geoff Woollard | | | |
+| 10      | 2020-02-10 | Medical image processing in Python | Michal Kazmierski | | | |
+<!-- | 09      | 2020-01-27 | Introduction to machine learning | Davide Chicco | | | | -->
 
 Links to presentations will be added after the seminar.
 
