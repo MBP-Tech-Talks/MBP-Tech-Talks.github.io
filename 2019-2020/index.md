@@ -11,7 +11,7 @@ Here you can find all the presentations for the 2019-2020 academic year.
 
 | Session | Date       | Title | Presenter | RSVP | Slides | Workshop |
 | ------- | ---------- | ----- | --------- | ---- | ------ | -------- |
-| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda | Geoff Woollard | https://forms.gle/zFz4vhj9Hyjsb4bo9 | | [Notebooks](https://github.com/geoffwoollard/gpu-speedups-mbptechtalk2020) |
+| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda | Geoff Woollard | [RSVP](https://forms.gle/zFz4vhj9Hyjsb4bo9) | | [Notebooks](https://github.com/geoffwoollard/gpu-speedups-mbptechtalk2020) |
 | 10      | 2020-02-10 | Medical image processing in Python | Michal Kazmierski | | | |
 
 ### Fall 2019
