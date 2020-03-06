@@ -9,10 +9,12 @@ Here you can find all the presentations for the 2019-2020 academic year.
 
 ### Winter 2020
 
-| Session | Date       | Title                                               | Presenter         | RSVP | Slides                                                                        | Workshop                                                                          |
-| ------- | ---------- | --------------------------------------------------- | ----------------- | ---- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda | Geoff Woollard    |      | [Slides](https://github.com/MBP-Tech-Talks/gpu-speedups-mbptechtalk2020)      |                                                                                   |
-| 10      | 2020-02-10 | Medical image processing in Python                  | Michal Kazmierski |      | [Slides](/2019-2020/10-medical-imaging/medical-imaging_michal-kazmierski.pdf) | [Workshop](https://github.com/MBP-Tech-Talks/mbp-tech-talks-2020-medical-imaging) |
+| Session | Date       | Title                                                  | Presenter         | RSVP | Slides                                                                        | Workshop                                                                          |
+| ------- | ---------- | ------------------------------------------------------ | ----------------- | ---- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda    | Geoff Woollard    |      | [Slides](https://github.com/MBP-Tech-Talks/gpu-speedups-mbptechtalk2020)      |                                                                                   |
+| 10      | 2020-02-10 | Medical image processing in Python                     | Michal Kazmierski |      | [Slides](/2019-2020/10-medical-imaging/medical-imaging_michal-kazmierski.pdf) | [Workshop](https://github.com/MBP-Tech-Talks/mbp-tech-talks-2020-medical-imaging) |
+| 11      | 2020-04-20 | Cloud solutions for genomc data storage and processing | Anthony Mammoliti |      |                                                                               |                                                                                   |
+
 
 ### Fall 2019
 
