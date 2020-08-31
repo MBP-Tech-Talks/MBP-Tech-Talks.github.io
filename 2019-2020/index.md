@@ -7,17 +7,6 @@ Here you can find all the presentations for the 2019-2020 academic year.
 
 ## Presentations
 
-### Winter 2020
-
-| Session | Date       | Title                                                  | Presenter         | RSVP | Slides                                                                        | Workshop                                                                          |
-| ------- | ---------- | ------------------------------------------------------ | ----------------- | ---- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda    | Geoff Woollard    |      | [Slides](https://github.com/MBP-Tech-Talks/gpu-speedups-mbptechtalk2020)      |                                                                                   |
-| 10      | 2020-02-10 | Medical image processing in Python                     | Michal Kazmierski |      | [Slides](/2019-2020/10-medical-imaging/medical-imaging_michal-kazmierski.pdf) | [Workshop](https://github.com/MBP-Tech-Talks/mbp-tech-talks-2020-medical-imaging) |
-| 11      | 2020-04-20 | Cloud solutions for genomc data storage and processing | Anthony Mammoliti |      |                                                                               |                                                                                   |
-
-
-### Fall 2019
-
 | Session | Date       | Title                                             | Presenter         | Slides                                                                       | Workshop                                                                                                                                                                          |
 | ------- | ---------- | ------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 01      | 2019-10-04 | DNA Sequencing                                    | James Hawley      | [Slides](/2019-2020/01-dna-sequencing/)                                      |                                                                                                                                                                                   |
@@ -28,6 +17,10 @@ Here you can find all the presentations for the 2019-2020 academic year.
 | 06      | 2019-11-22 | DNA methylation analysis                          | Mehran Karimzadeh | [Slides](/2019-2020/06-dna-methylation/)                                     | [Additional scripts](https://github.com/MBP-Tech-Talks/MBP-Tech-Talks.github.io/tree/master/2019-2020/06-dna-methylation), [Installation notes for workshop](installation-notes/) |
 | 07      | 2019-11-29 | Proteo-genomics analysis                          | Lydia Liu         | [Slides](/2019-2020/07-intro-proteogenomics/intro-proteomics_lydia-liu.pdf)  |                                                                                                                                                                                   |
 | 08      | 2019-12-06 | Chromosome conformation capture and the 3D genome | James Hawley      | [Slides](/2019-2020/08-3d-genome/)                                           | [Workshop](/2019-2020/08-3d-genome/workshop/)                                                                                                                                     |
+| 09      | 2020-02-03 | GPU speedups in Python with Cupy, Numba, and pycuda    | Geoff Woollard    | [Slides](https://github.com/MBP-Tech-Talks/gpu-speedups-mbptechtalk2020)      |                                                                                   |
+| 10      | 2020-02-10 | Medical image processing in Python                     | Michal Kazmierski | [Slides](/2019-2020/10-medical-imaging/medical-imaging_michal-kazmierski.pdf) | [Workshop](https://github.com/MBP-Tech-Talks/mbp-tech-talks-2020-medical-imaging) |
+| ~~11~~      | ~~2020-04-20~~ | ~~Cloud solutions for genomc data storage and processing~~ | ~~Anthony Mammoliti~~ | ~~Cancelled~~                                                                              | ~~Cancelled~~                                                                                  |
+
 
 Links to presentations will be added after the seminar.
 

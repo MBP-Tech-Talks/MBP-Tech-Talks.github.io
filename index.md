@@ -6,8 +6,6 @@ We are a group of students primarily in the [Department of Medical Biophysics](h
 
 ## Schedule
 
-[2019-2020 Talks](/2019-2020/)
-
 Our full schedule of talks, including links to past presentations, can be found [in our Google Sheets spreadsheet](https://bit.ly/MBP-tech-talks).
 
 ## Past Presentations
@@ -17,6 +15,7 @@ See our full set of presentations for previous years.
 * [2016-2017](/2016-2017/)
 * [2017-2018](/2017-2018/)
 * [2018-2019](/2018-2019/)
+* [2019-2020](/2019-2020/)
 
 ## GitHub
 
